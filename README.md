@@ -13,9 +13,9 @@ I decided to do my new Portfolio in [Next.js](https://nextjs.org/) because it's 
 ## Packages used
 
 - [Tailwindcss](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
-- [Framer-motion](https://www.framer.com/motion/)
+- [Framer-motion](https://www.npmjs.com/package/framer-motion)
 - [TypeWriter](https://www.npmjs.com/package/react-simple-typewriter)
+- [React Social Icons](https://www.npmjs.com/package/react-social-icons)
 
 ## Preview my website 
 
