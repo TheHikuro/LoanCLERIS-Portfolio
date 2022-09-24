@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Header, Hero } from '../components/index'
+import { Header, Hero, About } from '../components/index'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +17,9 @@ const Home: NextPage = () => {
         <Hero />
       </section>
       {/* About me  */}
+      <section id="about" className='snap-center'>
+        <About />
+      </section>
       {/* Skills */}
       {/* Projects */}
       {/* Education */}
