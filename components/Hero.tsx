@@ -3,10 +3,11 @@ import { Cursor, useTypewriter } from "react-simple-typewriter"
 import { BackgroundCircle } from "./index"
 import loan from "../assets/images/loan_bg.jpeg"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export const Hero = () => {
     const [text, count] = useTypewriter({
-        words: ["Bonjour je suis Loan CLERIS", "console.log('J'adore le café')", "Développeur Fullstack"],
+        words: ["Bonjour je suis Loan CLERIS", "<CoffeeLover />", "Développeur Next.Js", "Développeur React"],
         loop: true,
         delaySpeed: 2000,
         typeSpeed: 50,
@@ -23,11 +24,31 @@ export const Hero = () => {
             >
                 <Image src={loan} alt="Loan profil picture" className="rounded-full" />
             </motion.div>
-            <div className="">
-                <h1>
-                    <span>{text}</span>
+            <div className="z-20">
+                <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+                    Développeur Fullstacks
+                </h2>
+                <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+                    <span className="mr-3">{text}</span>
                     <Cursor cursorColor="#F7AB0A" />
                 </h1>
+                <div className="pt-5">
+                    <Link href="#about">
+                        <button className="heroBtn">A propos</button>
+                    </Link>
+                    <Link href="#experiences">
+                        <button className="heroBtn">Expériences</button>
+                    </Link>
+                    <Link href="#educations">
+                        <button className="heroBtn">Educations</button>
+                    </Link>
+                    <Link href="#skills">
+                        <button className="heroBtn">Skills</button>
+                    </Link>
+                    <Link href="#projects">
+                        <button className="heroBtn">Projets</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
