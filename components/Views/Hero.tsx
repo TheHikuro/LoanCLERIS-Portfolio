@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Cursor, useTypewriter } from "react-simple-typewriter"
-import { BackgroundCircle } from "./index"
-import loan from "../assets/images/loan_bg.jpeg"
+import { BackgroundCircle } from "../index"
+import loan from "../../assets/images/loan_bg.jpeg"
 import { motion } from "framer-motion"
 import Link from "next/link"
 
