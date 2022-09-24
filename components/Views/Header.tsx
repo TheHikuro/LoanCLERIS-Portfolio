@@ -7,7 +7,8 @@ export const Header = () => {
         "https://www.linkedin.com/in/loan-cleris-8275b5136/",
         "https://www.facebook.com/loan.cleris/",
         "https://www.instagram.com/loan_cleris/",
-        "https://open.spotify.com/user/kaomagni"
+        "https://open.spotify.com/user/kaomagni",
+        "https://github.com/TheHikuro"
     ]
     return (
         <Fragment>
