@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
-import loan from '../assets/images/loan_bg.jpg'
-import loanMobile from '../assets/images/loan_carre.jpeg'
+import loan from '../../assets/images/loan_bg.jpg'
+import { Title } from '../index'
 
 export const About = () => {
     return (
@@ -12,9 +12,7 @@ export const About = () => {
             transition={{ duration: 1.5 }}
             className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
         >
-            <h3 className="absolute top-24 -mr-8 uppercase tracking-[20px] text-gray-500 text-2xl">
-                About
-            </h3>
+            <Title title='A propos' />
             <motion.div
                 initial={{ x: -200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
