@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Header, Hero, About, Experiences, Educations, Skills } from '../components/index'
+import { Header, Hero, About, Experiences, Educations, Skills, Projects } from '../components/index'
 
 const Home: NextPage = () => {
   return (
@@ -28,13 +28,18 @@ const Home: NextPage = () => {
       <section id="education" className='snap-center'>
         <Educations />
       </section>
-      {/* Skills */}
+
       <section id="skills" className='snap-start'>
         <Skills />
       </section>
-      {/* Projects */}
-      {/* Education */}
+
+      <section id="projects" className='snap-start'>
+        <Projects />
+      </section>
       {/* Contact */}
+      <section id="contact" className='snap-start'>
+
+      </section>
     </div>
   )
 }
