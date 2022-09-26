@@ -3,7 +3,13 @@ import { motion } from "framer-motion"
 import { ProjectsPresentation, Title } from "../index"
 
 export const Projects = () => {
-    const myProjects = [1, 2, 3, 4, 5]
+    const myProjects = [
+        { title: 'Poker 21', description: 'Jeu de poker en ligne', image: Poker21, link: 'https://esgi-poker21.netlify.app/' },
+        { title: 'Trombinoscoop', description: 'Application de gestion de classe', image: Poker21, link: 'https://dev-worker.cf/Connexion' },
+        { title: 'ESGI-Associations', description: 'Application de gestion d\'associations', image: Poker21, link: 'https://esgi-associations.netlify.app/' },
+        { title: 'ESGI-Network', description: 'Application de gestion d\'événements', image: Poker21, link: 'https://esgi-events.netlify.app/' },
+        { title: 'Portfolio FormAnglais', description: 'Portfolio pour Alexandra Roque, professeur d\'Anglais à domicile ou en entreprise.', image: Poker21, link: 'https://esgi-network.netlify.app/' },
+    ]
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -15,11 +21,12 @@ export const Projects = () => {
             <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
                 {myProjects.map((project, index) => (
                     <ProjectsPresentation
-                        background={Poker21}
-                        title="Poker 21"
-                        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque illum voluptas beatae quo non dolor, ipsam velit ullam, laborum corporis minima voluptatem consequuntur quaerat sint, tempora sed qui iste reiciendis!"
+                        background={project.image}
+                        title={project.title}
+                        description={project.description}
                         pages={myProjects.length}
                         index={index + 1}
+                        redirectLink={project.link}
                     />
                 ))}
             </div>
