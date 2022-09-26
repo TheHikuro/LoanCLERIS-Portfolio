@@ -8,6 +8,7 @@ export * from './Views/Experiences'
 export * from './Views/Educations';
 export * from './Views/Skills';
 export * from './Views/Projects';
+export * from './Views/Contact';
 
 // * My common components
 export * from './Comon/Title';

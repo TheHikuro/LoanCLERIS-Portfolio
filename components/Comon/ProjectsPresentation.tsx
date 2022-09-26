@@ -18,8 +18,16 @@ export const ProjectsPresentation = ({ background, title, description, pages, in
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}
                 viewport={{ once: false }}
+                className="mt-5"
             >
-                <Image src={background} alt="ESGI poker 21" objectFit="cover" width={600} height={300} />
+                <Image
+                    src={background}
+                    alt="ESGI poker 21"
+                    objectFit="fill"
+                    width={600}
+                    height={350}
+                    className="object-cover"
+                />
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 300 }}
