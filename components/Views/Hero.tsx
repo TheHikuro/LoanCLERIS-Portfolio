@@ -4,6 +4,8 @@ import { BackgroundCircle } from "../index"
 import loan from "../../assets/images/loan_bg.jpeg"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
+
 
 export const Hero = () => {
     const [text, count] = useTypewriter({
@@ -13,6 +15,7 @@ export const Hero = () => {
         typeSpeed: 50,
         deleteSpeed: 50,
     })
+    const { t } = useTranslation()
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircle />
@@ -34,19 +37,19 @@ export const Hero = () => {
                 </h1>
                 <div className="pt-5">
                     <Link href="#about">
-                        <button className="heroBtn">A propos</button>
+                        <button className="heroBtn">{t('About')}</button>
                     </Link>
                     <Link href="#experiences">
-                        <button className="heroBtn">Expériences</button>
+                        <button className="heroBtn">{t('WorkExperience')}</button>
                     </Link>
                     <Link href="#educations">
-                        <button className="heroBtn">Educations</button>
+                        <button className="heroBtn">{t('Education')}</button>
                     </Link>
                     <Link href="#skills">
-                        <button className="heroBtn">Skills</button>
+                        <button className="heroBtn">{t('Skills')}</button>
                     </Link>
                     <Link href="#projects">
-                        <button className="heroBtn">Projets</button>
+                        <button className="heroBtn">{t('Projects')}</button>
                     </Link>
                 </div>
             </div>

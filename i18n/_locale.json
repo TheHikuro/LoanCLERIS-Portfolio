@@ -6,8 +6,22 @@
             "WorkExperience": "Expériences",
             "Education": "Formation",
             "Skills": "Compétences",
+            "Projects": "Projets",
             "Contact": "Contact",
-            "TakeContact": "Prendre contact"
+            "TakeContact": "Prendre contact",
+            "AboutPage_text_1": "Voici un petit",
+            "AboutPage_text_2": "résumé",
+            "AboutPage_text_3": "de mon parcours",
+            "AboutPage_text_4": "Je suis actuellement en master 2 au sein de l'ESGI à Paris. Je suis en alternance chez Orano en tant que développeur fullstacks depuis maintenant 3 ans. J'ai eu la chance de travailler sur des projets variés et de découvrir de nouvelles technologies. Je suis passionné par le développement web et mobile. J'aime apprendre de nouvelles choses et découvrir de nouvelles technologies.",
+            "WorkExperience_text_1": "Je suis actuellement chez Orano en tant que Developpeur, je suis attribué à plusieurs projets à déployer en interne afin d'améliorer le SI dans l'équipe de la Factory U.",
+            "WorkExperience_text_2": "J'ai travaillé sur une plateforme web pour créer une interface pour l'administrateur qui lui permettrait de donner des autorisations aux autres utilisateurs.",
+            "WorkExperience_text_3": "Au sein de l'équipe Candriam, ma mission principale était de conceptualiser et développer un projet d'analyse de transcription en python (Text mining, question fondamentale de l'analyse sémantique et conclusions, système de mesure statistique objectif). Ma seconde mission a été réalisée sur le logiciel BloomBerg afin de classifier les données.",
+            "WorkExperience_text_4": "Au sein de Cognacq-Jay, cette expérience m'a permis d'apprendre quelques bases du réseau au niveau des protocoles TCP/IP, DHCP et DNS. C'était également ma première expérience informatique, afin de découvrir ce nouveau monde dans lequel je souhaite m'émanciper.",
+            "WorkExperience_text_5": "Au cours de mon apprentissage au sein du groupe TF1, je suis devenu plus autonome, plus responsable et plus mature. Ces qualités ont été acquises grâce aux managers et aux collaborateurs, toujours disponibles pour m'aider à améliorer mes compétences. De plus, j'ai pu apprécier le lien réel entre la cuisine et les serveurs, qui a toujours favorisé une bonne communication. Ces valeurs, ainsi que la créativité et l'innovation, me semblent être communes au domaine de l'informatique.",
+            "Education_text_1": "Actuellement au sein de l'ESGI, j'approfondis mes connaissances dans les languages que je pourrai utiliser au cours de mes prochaines expériences professionnel.",
+            "Education_text_2": "Malheureusement je ne l'ai pas eu du premier coup donc après cela je suis allé à Efficom pour le repasser. Cette prise de recul m'a permis de revoir mes points faibles. A la fin du mois de juillet, je l'ai finalement passé et je vais faire une autre année à Efficom pour me spécialiser dans le développement Full Stack.",
+            "Education_text_3": "L'un de mes autres passe-temps est de créer des sites web. Aussi, lorsque je ne me suis plus vu cuisiner dans dix ans, j'ai décidé de changer mes perspectives de carrière et j'ai choisi le développement web. Malheureusement, je manquais de connaissances par rapport à d'autres talents sur le marché, et j'ai donc dû travailler encore plus dur pour combler ces déficits. Après deux ans de formation et de travail acharné, j'ai pu gérer des projets en équipe, développer des applications en C# (ModelViewController) et acquérir toutes les capacités et compétences pour obtenir mon diplôme.",
+            "Education_text_4": "Trois années d'expérience académique et professionnelle dans le monde de la cuisine m'ont appris la discipline, l'assiduité et la créativité. Pendant cette période, j'ai également apprécié de travailler en équipe pour obtenir un résultat final encore meilleur. Travailler avec d'autres personnes m'a fait réaliser que je suis douée pour écouter et faire partie d'une équipe afin d'obtenir un résultat encore meilleur que seul."
         }
     },
     "en": {
@@ -17,8 +31,18 @@
             "WorkExperience": "Work experience",
             "Education": "Education",
             "Skills": "Skills",
+            "Projects": "Projects",
             "Contact": "Contact",
-            "TakeContact": "Take contact"
+            "TakeContact": "Take contact",
+            "AboutPage_text_1": "Here is a little",
+            "AboutPage_text_2": "",
+            "AboutPage_text_3": "background",
+            "AboutPage_text_4": "I am currently in master 2 at ESGI in Paris. I am in alternance at Orano as a fullstacks developer for 3 years now. I had the chance to work on various projects and discover new technologies. I am passionate about web and mobile development. I like to learn new things and discover new technologies.",
+            "WorkExperience_text_1": "I am currently at Orano as a Developer, I am assigned to several projects to be deployed internally in order to improve the SI in the Factory U team.",
+            "WorkExperience_text_2": "I worked on a web platform to create an interface for the administrator that would allow him to give permissions to other users.",
+            "WorkExperience_text_3": "Within the Candriam team, my main mission was to conceptualize and develop a python transcription analysis project (Text mining, fundamental question of semantic analysis and conclusions, objective statistical measurement system). My second mission was carried out on the BloomBerg software to classify data.",
+            "WorkExperience_text_4": "Within Cognacq-Jay, this experience allowed me to learn some basics of the network at the level of the TCP / IP protocols, DHCP and DNS. It was also my first computer experience, in order to discover this new world in which I want to emancipate myself.",
+            "WorkExperience_text_5": "During my learning within the TF1 group, I became more autonomous, more responsible and more mature. These qualities were acquired thanks to the managers and collaborators, always available to help me improve my skills. In addition, I was able to appreciate the real link between the kitchen and the servers, which always favored good communication. These values, as well as creativity and innovation, seem to be common to the field of computer science."
         }
     }
 }
