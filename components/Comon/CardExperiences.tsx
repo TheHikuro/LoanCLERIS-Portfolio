@@ -1,42 +1,43 @@
 import { motion } from 'framer-motion'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
+import React from 'react'
+import { CardProps } from '../../ts/card'
 
-interface CardExperiencesProps {
-    jobs: {
-        title: string;
-        date: string;
-        description: string;
-        techno: StaticImageData[]
-        image: StaticImageData;
+export const CardExperiences = ({ jobs }: CardProps) => {
+    const [isOpen, setIsOpen] = React.useState({
+        open: false,
+        id: 0
+    })
+    const handleOpen = (cardId: any) => {
+        setIsOpen({
+            open: !isOpen.open,
+            id: cardId
+        })
     }
-}
-
-export const CardExperiences = ({ jobs }: CardExperiencesProps) => {
     return (
-        <article className='flex items-center flex-col rounded-lg space-y-7 flex-shrink-0 mt-32 w-[320px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 justify-start'>
-            <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                transition={{ duration: 1.2 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover"
-            >
-                <Image src={jobs.image} objectFit='cover' layout='responsive' className='rounded-lg object-cover object-center' />
-            </motion.div>
-            <div
-                className='px-0 md:px-10'
-            >
-                <h4 className='text-4xl font-bold'>{jobs.title}</h4>
-                <p className='italic uppercase text-sm tracking-wide text-gray-500'>{jobs.date}</p>
-                <div className='flex space-x-2 my-2'>
-                    {jobs.techno.map((tech, index) => (
-                        <Image key={index} src={tech} width={30} height={30} />
-                    ))}
+        <motion.div
+            onClick={() => handleOpen(jobs.id)}
+            initial={{ opacity: 0, y: -300 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
+            exit={{ opacity: 0, y: -300 }}
+            className="flex flex-col justify-center items-center space-x-8 space-y-10 bg-[#292929] rounded-2xl cursor-pointer"
+        >
+            <div className='flex flex-col justify-center items-center space-y-8 p-5'>
+                <div className="rounded-full flex w-32 h-32">
+                    <Image src={jobs.image} alt="" className="rounded-xl" objectFit='fill' />
                 </div>
-                <div className='text-justify text-sm'>
-                    {jobs.description}
-                </div>
+                <span className="uppercase text-md font-bold items-center flex justify-center">
+                    {jobs.title}
+                </span>
+                {
+                    isOpen.open ?
+                        <span className="text-sm text-white text-justify w-64">{jobs.description}</span>
+                        :
+                        null
+                }
             </div>
-        </article>
+        </motion.div >
     )
 }

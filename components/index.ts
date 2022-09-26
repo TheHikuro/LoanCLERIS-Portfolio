@@ -12,6 +12,7 @@ export * from './Views/Contact';
 
 // * My common components
 export * from './Comon/Title';
+export * from './Comon/CardEducations';
 export * from './Comon/CardExperiences';
 export * from './Comon/Skill';
 export * from './Comon/ProjectsPresentation';

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { CardExperiences, Title } from '../index'
+import { CardEducations, Title } from '../index'
 import TF1 from '../../assets/images/logoEntreprise/TF1-logo.png'
 import ReactLogo from '../../assets/images/logoTechno/React.png'
 
@@ -16,7 +16,7 @@ export const Educations = () => {
             <Title title='Educations' />
             <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory md:scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-[#F7AB0A]/80'>
                 {myEducations.map((school, index) => (
-                    <CardExperiences key={index} jobs={school} />
+                    <CardEducations key={index} jobs={school} />
                 ))}
             </div>
         </div>
