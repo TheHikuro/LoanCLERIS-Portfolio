@@ -15,8 +15,8 @@ export const Contact = () => {
                 </h4>
                 <div className="flex md:flex-row flex-col justify-evenly md:space-x-36 mx-2 items-start">
                     <motion.div
-                        initial={{ x: -500, opacity: 0, scale: 0.5 }}
-                        whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                        initial={{ x: -200, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
                         viewport={{ once: true }}
                         className="space-y-5 flex justify-start flex-col items-start mb-10 md:mb-0"
@@ -38,8 +38,8 @@ export const Contact = () => {
                     </motion.div>
 
                     <motion.form
-                        initial={{ x: 500, opacity: 0, scale: 0.5 }}
-                        whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                        initial={{ x: 300, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5 }}
                         viewport={{ once: true }}
                         className="flex flex-col space-y-2 w-fit mx-auto"
