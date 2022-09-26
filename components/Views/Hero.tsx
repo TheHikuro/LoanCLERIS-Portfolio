@@ -3,7 +3,6 @@ import { Cursor, useTypewriter } from "react-simple-typewriter"
 import { BackgroundCircle } from "../index"
 import loan from "../../assets/images/loan_bg.jpeg"
 import { motion } from "framer-motion"
-import Link from "next/link"
 import { useTranslation } from "react-i18next"
 
 
@@ -36,21 +35,21 @@ export const Hero = () => {
                     <Cursor cursorColor="#F7AB0A" />
                 </h1>
                 <div className="pt-5">
-                    <Link href="#about">
+                    <a href="#about">
                         <button className="heroBtn">{t('About')}</button>
-                    </Link>
-                    <Link href="#experiences">
+                    </a>
+                    <a href="#experiences">
                         <button className="heroBtn">{t('WorkExperience')}</button>
-                    </Link>
-                    <Link href="#educations">
+                    </a>
+                    <a href="#education">
                         <button className="heroBtn">{t('Education')}</button>
-                    </Link>
-                    <Link href="#skills">
+                    </a>
+                    <a href="#skills">
                         <button className="heroBtn">{t('Skills')}</button>
-                    </Link>
-                    <Link href="#projects">
+                    </a>
+                    <a href="#projects">
                         <button className="heroBtn">{t('Projects')}</button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
