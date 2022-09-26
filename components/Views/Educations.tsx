@@ -11,9 +11,9 @@ export const Educations = () => {
         { title: 'FERRANDI', date: '2014 - 2017', description: "Trois années d'expérience académique et professionnelle dans le monde de la cuisine m'ont appris la discipline, l'assiduité et la créativité. Pendant cette période, j'ai également apprécié de travailler en équipe pour obtenir un résultat final encore meilleur. Travailler avec d'autres personnes m'a fait réaliser que je suis douée pour écouter et faire partie d'une équipe afin d'obtenir un résultat encore meilleur que seul.", image: TF1, techno: [ReactLogo] },
     ]
     return (
-        <div className="h-screen flex relative overflow-hidden flex-col text-lft md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
+        <div className="h-screen flex relative overflow-hidden flex-col text-lft md:flex-row max-w-full px-10 justify-evenly mx-auto items-center scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
             <Title title='Educations' />
-            <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory '>
+            <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
                 {myEducations.map((school, index) => (
                     <CardExperiences key={index} jobs={school} />
                 ))}
