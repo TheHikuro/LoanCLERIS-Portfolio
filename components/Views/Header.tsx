@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { Fragment } from "react"
 import { SocialIcon } from 'react-social-icons'
+import { useTranslation } from "react-i18next"
 
 export const Header = () => {
     const icons = [
@@ -11,6 +12,7 @@ export const Header = () => {
         "https://open.spotify.com/user/kaomagni",
         "https://github.com/TheHikuro"
     ]
+    const { t } = useTranslation()
     return (
         <Fragment>
             <header className="sticky top-0 p-5 flex flex-items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
@@ -41,7 +43,7 @@ export const Header = () => {
                             fgColor="gray"
                             bgColor="transparent"
                         />
-                        <span className="uppercase hidden md:inline-flex text-sm text-gray-400">Prendre contact !</span>
+                        <span className="uppercase hidden md:inline-flex text-sm text-gray-400">{t('TakeContact')}</span>
                     </motion.div>
                 </Link>
             </header>

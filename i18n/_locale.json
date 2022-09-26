@@ -1,0 +1,24 @@
+{
+    "fr": {
+        "translations": {
+            "Author": "Loan CLERIS",
+            "About": "A propos",
+            "WorkExperience": "Expériences",
+            "Education": "Formation",
+            "Skills": "Compétences",
+            "Contact": "Contact",
+            "TakeContact": "Prendre contact"
+        }
+    },
+    "en": {
+        "translations": {
+            "Author": "Loan CLERIS",
+            "About": "About",
+            "WorkExperience": "Work experience",
+            "Education": "Education",
+            "Skills": "Skills",
+            "Contact": "Contact",
+            "TakeContact": "Take contact"
+        }
+    }
+}
