@@ -47,9 +47,9 @@ export const Hero = () => {
                     <a href="#skills">
                         <button className="heroBtn">{t('Skills')}</button>
                     </a>
-                    <a href="#projects">
+                    {/* <a href="#projects">
                         <button className="heroBtn">{t('Projects')}</button>
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </div>
