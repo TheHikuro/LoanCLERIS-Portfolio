@@ -12,7 +12,7 @@ export const CardEducations = ({ jobs }: CardProps) => {
                 viewport={{ once: true }}
                 className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover"
             >
-                <Image src={jobs.image} objectFit='cover' layout='responsive' className='rounded-lg object-cover object-center' />
+                <img src="" alt="" />
             </motion.div>
             <div
                 className='px-0 md:px-10'
@@ -21,7 +21,7 @@ export const CardEducations = ({ jobs }: CardProps) => {
                 <p className='italic uppercase text-sm tracking-wide text-gray-500'>{jobs.date}</p>
                 <div className='flex space-x-2 my-2'>
                     {jobs.techno.map((tech, index) => (
-                        <Image key={index} src={tech} width={30} height={30} />
+                        <img src="" alt="" />
                     ))}
                 </div>
                 <div className='text-justify text-sm'>
