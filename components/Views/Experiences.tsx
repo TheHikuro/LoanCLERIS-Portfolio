@@ -21,21 +21,23 @@ export const Experiences = () => {
         { title: 'TF1 - Groupe', date: '2021 - 2021', description: t('WorkExperience_text_5'), image: tf1, id: 5 },
     ];
 
-    const [currentJobIndex, setCurrentJobIndex] = useState(0);
-    const currentJob = useRef(myJobs[currentJobIndex]);
+    const [currentJobIndex, setCurrentJobIndex] = useState(myJobs[0].id);
 
-    const nextJob = () => setCurrentJobIndex((prevIndex) => (prevIndex + 1) % myJobs.length);
+    const nextJob = () => {
+        if (currentJobIndex === myJobs.length) return setCurrentJobIndex(1)
+        setCurrentJobIndex((prevIndex) => (prevIndex === myJobs.length ? 0 : prevIndex + 1));
+    }
 
-    const prevJob = () => setCurrentJobIndex((prevIndex) => (prevIndex === 0 ? myJobs.length - 1 : prevIndex - 1));
+    const prevJob = () => {
+        if (currentJobIndex === 1) return setCurrentJobIndex(myJobs.length)
+        setCurrentJobIndex((prevIndex) => (prevIndex === 1 ? myJobs.length : prevIndex - 1));
+    }
 
     const handleJobClick = (index: number) => {
         setCurrentJobIndex(index);
-        currentJob.current = myJobs[index];
     };
 
-    useEffect(() => { currentJob.current = myJobs[currentJobIndex] }, [currentJobIndex]);
-
-    const displayedJobs = Array.from({ length: 4 }, (_, i) => myJobs[(currentJobIndex + i + 1) % myJobs.length]);
+    const displayedJobs = myJobs.filter((_, index) => index !== currentJobIndex - 1);
 
     return (
         <div className="h-screen flex relative overflow-hidden flex-col md:flex-row px-10 justify-evenly mx-auto items-center md:scrollbar md:scrollbar-track-gray-400/20 md:scrollbar-thumb-[#F7AB0A]/80 max-w-screen-full overflow-x-hidden">
@@ -44,7 +46,7 @@ export const Experiences = () => {
                 <div className='w-full h-[75%] rounded-lg absolute left-1/2 top-[55%] transform -translate-x-1/2 -translate-y-1/2 shadow-light-md overflow-hidden'>
                     <AnimatePresence>
                         <motion.div
-                            key={currentJob.current.id}
+                            key={myJobs[currentJobIndex - 1].id}
                             className='w-full h-full bg-cover rounded-md overflow-hidden'
                             initial={{ opacity: 0, filter: 'blur(10px)' }}
                             animate={{ opacity: 1, filter: 'blur(0px)' }}
@@ -52,58 +54,59 @@ export const Experiences = () => {
                             transition={{ duration: 1, ease: 'linear', easings: 'easeInOut' }}
                         >
                             <Image
-                                src={currentJob.current.image}
-                                alt={currentJob.current.title}
+                                src={myJobs[currentJobIndex - 1].image}
+                                alt={myJobs[currentJobIndex - 1].title}
                                 layout='fill'
                                 objectFit='cover'
                                 className='h-full w-full object-cover'
                                 style={{
-                                    backdropFilter: 'blur(8px)', // Adjust the blur value as needed
-                                    filter: 'brightness(0.5)' // Adjust the brightness value as needed (0.5 reduces brightness to 50%)
+                                    backdropFilter: 'blur(8px)',
+                                    filter: 'brightness(0.5)'
                                 }}
                             />
                         </motion.div>
                     </AnimatePresence>
                     <AnimatePresence>
                         <motion.div
-                            className='absolute top-1/2 transform -translate-y-1/2 w-1/3 ml-16'
+                            className='absolute md:top-1/2 md:transform md:-translate-y-1/2 md:w-1/3 md:ml-16 top-1/4 left-2 pr-2 text-justify'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 1, ease: 'easeInOut' }}
                         >
-                            <h2 className='uppercase text-6xl font-extrabold'>{currentJob.current.title}</h2>
-                            <span className='text-lg text-justify'>{currentJob.current.description}</span>
+                            <h2 className='uppercase md:text-6xl font-extrabold text-xl'>{myJobs[currentJobIndex - 1].title}</h2>
+                            <span className='md:text-lg text-sm w-full h-full'>{myJobs[currentJobIndex - 1].description}</span>
                         </motion.div>
                     </AnimatePresence>
-                    <div className='absolute flex top-1/2 transform -translate-y-1/2 translate-x-[95%] space-x-5'>
-                        {displayedJobs.map((job, index) => (
-                            <AnimatePresence key={job.id}>
-                                <motion.div
-                                    className='relative w-52 h-72 rounded-md shadow-light-md overflow-hidden group cursor-pointer'
-                                    initial={{ opacity: 0, scale: 0.8, x: `${index * 25}%` }}
-                                    animate={{ opacity: 1, scale: 1, x: 0 }}
-                                    exit={{ opacity: 0, scale: 0.8, x: `${index * 25}%` }}
-                                    transition={{ duration: 1, ease: 'easeInOut' }}
-                                    onClick={() => handleJobClick(job.id - 1)}
-                                >
-                                    <Image
-                                        src={job.image}
-                                        alt={job.title}
-                                        className='h-full w-full object-cover group-hover:scale-125 duration-700 cursor-pointer'
-                                        layout='fill'
-                                    />
-                                    <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                                        <div>
-                                            <h3 className='text-2xl font-bold'>{job.title}</h3>
-                                            <span className='text-sm'>{job.date}</span>
+                    <div className='md:absolute hidden md:flex bottom-5 transform space-x-5 w-full items-center justify-center'>
+                        {displayedJobs
+                            .map((job, index) => (
+                                <AnimatePresence key={job.id}>
+                                    <motion.div
+                                        className='relative w-56 h-32 rounded-md shadow-light-md overflow-hidden group cursor-pointer'
+                                        initial={{ opacity: 0, scale: 0.8, x: `${index * 25}%` }}
+                                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                                        exit={{ opacity: 0, scale: 0.8, x: `${index * 25}%` }}
+                                        transition={{ duration: 1, ease: 'easeInOut' }}
+                                        onClick={() => handleJobClick(job.id)}
+                                    >
+                                        <Image
+                                            src={job.image}
+                                            alt={job.title}
+                                            className='h-full w-full object-cover group-hover:scale-125 duration-700 cursor-pointer'
+                                            layout='fill'
+                                        />
+                                        <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                                            <div>
+                                                <h3 className='text-xl font-bold'>{job.title}</h3>
+                                                <span className='text-sm'>{job.date}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        ))}
+                                    </motion.div>
+                                </AnimatePresence>
+                            ))}
                     </div>
-                    <div className='absolute flex space-x-2 bottom-10 right-0 w-full justify-end mr-10'>
+                    <div className='absolute md:hidden flex space-x-2 bottom-5 w-full justify-center'>
                         <div className='rounded-full bg-white/10 hover:bg-white/40 w-14 h-14 flex justify-center items-center cursor-pointer' onClick={prevJob}>
                             <BsChevronLeft size={25} />
                         </div>
